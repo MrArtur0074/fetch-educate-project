@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1>Создание нового товара</h1>
+    <!-- Создание формы -->
+    <form class="product-create-form" id="formCreate">
+        <div class="input-title">
+            <!-- Поле имя -->
+            <label for="title">Название товара</label>
+            <input type="text" name="title" placeholder="Имя">
+        </div>
+        <div class="input-image">
+            <!-- Поле url изображения -->
+            <label for="image">Изображение товара</label>
+            <input size="64" type="text" name="image" placeholder="url товара">
+        </div>
+        <div class="input-catogory">
+            <label for="catogory">Категория товара</label>
+            <!-- Список категорий товара -->
+            <select name="category">
+                <option selected value="men's clothing">men's clothing</option>
+                <option value="jewelery">jewelery</option>
+                <option value="electronics">electronics</option>
+                <option value="women's clothing">women's clothing</option>
+            </select>
+        </div>
+        <div class="input-price">
+            <!-- Цена товара -->
+            <label for="price">Цена товара</label>
+            <input type="number" name="price" placeholder="0">
+        </div>
+        <input type="submit" value="Создать товар">
+    </form>
+    <script src="javascript/main.js"></script>
+    <script src="javascript/createPrduct.js"></script>
+</body>
+</html>

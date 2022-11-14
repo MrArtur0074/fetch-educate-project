@@ -1,3 +1,24 @@
+.categories {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    justify-content: center;
+    column-gap: 30px;
+    row-gap: 10px;
+}
+.category {
+    height: 300px;
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.category:hover {
+    background-color: aquamarine;
+}
+.category a {
+    text-decoration: none;
+    font-size: 18px;
+}
 .products {
     display: flex;
     justify-content: start;

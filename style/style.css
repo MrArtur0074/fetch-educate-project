@@ -1,67 +1,183 @@
-.categories {
-    display: grid;
-    grid-template-columns: 400px 400px;
-    justify-content: center;
-    column-gap: 30px;
-    row-gap: 10px;
+.one-line li {
+    display: inline-block;
+    margin-left: 20px;
 }
-.category {
-    height: 300px;
-    background-color: aqua;
+.github:hover {
+    --tw-text-opacity: 1;
+    color: rgb(100 116 139/var(--tw-text-opacity));
+}  
+.buttons {
+    margin-left: 20px;
+}
+a:hover {
+    color: darkslateblue;
+    text-decoration: underline;
+}
+.upper-class {
+    background-image: url('../assets/nature.jpg');
+    min-height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.back-image {
+    min-height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 48px;
+    color: white;
 }
-.category:hover {
+.slice {
+    max-width: 1266px;
+    margin: 30px auto;
+}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper-slide img {
+    height: 600px;
+}
+footer {
+    min-height: 500px;
+    background-image: url(assets/footer.);
+}
+.text-tour {
+    color: black;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.ul {
+    list-style-type: circle;
+}
+.ul li {
+    margin-left: 25px;
+}
+.category img {
+    max-height: 300px;
+    width: 100%;
+}
+.category .item {
+    position: relative;
+    cursor: pointer;
+}
+.category .item:hover {
+    transform-origin: left top;
+    margin-top: -10px;
+    margin-left: 20px;
+    transition: margin-left 130ms;
+    transition: margin-top 130ms;
+    box-shadow: 0 10px 90px rgba(0, 0, 0, 0.4);
+}
+.category span {
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    z-index: 999;
+}
+.tour img {
+    width: 300px;
+    height: 210px;
+}
+.tour, .filter-menu {
+    background-color: white;
+    border: solid 1px grey;
+}
+.tour-title {
+    font-size: 24px;
+    font-weight: 600;
+}
+.tour .addCard {
+    width: 200px;
+    height: 40px;
+    background-color: aqua;
+    color: black;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+.tour .addCard:hover {
     background-color: aquamarine;
 }
-.category a {
-    text-decoration: none;
-    font-size: 18px;
-}
-.products {
-    display: flex;
-    justify-content: start;
-    flex-wrap: wrap;
-}
-.item {
-    width: 400px;
+.tour-price {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
     margin-bottom: 15px;
 }
-.item > div {
-    margin-left: 25px;
-    margin-right: 25px;
-    background-color: grey;
-    min-height: 300px;
-    padding-left: 30px;
-    padding-right: 30px;
+.tour .tour-bottom {
+    margin-top: auto;
 }
-.item-title {
-    text-align: center;
-    padding: 15px;
-    font-size: 22px;
+.tour:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    cursor: pointer;
 }
-.item-image img{
-    max-width: 100%;
-    margin-bottom: 20px;
-}
-.property {
+.tour-count {
+    margin-bottom: 10px;
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+    justify-content: center;
 }
-.property > div:nth-child(2n + 1) {
-    width: 30%;
+.tour-title {
+    width: 280px;
 }
-.property > div:nth-child(2n) {
-    width: 70%;
+.h1 {
+    font-size: 48px;
+    font-weight: 600;
 }
-.item-price {
-    text-align: center;
-    color: white;
-    font-size: 24px;
-    padding-bottom: 30px;
+.h2 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 20px;
 }
-.product-create-form > div {
-    margin-bottom: 15px;
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+.custom-number-input input:focus {
+outline: none !important;
+}
+
+.custom-number-input button:focus {
+outline: none !important;
 }

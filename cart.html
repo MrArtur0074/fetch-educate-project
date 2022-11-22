@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main grid grid-cols-4 slice gap-4">
+            <section class="col-span-1">
+                
+            </section>
+            <section class="col-start-2 col-end-5">
+                <h1 class="h1">Корзина <span>(1)</span></h1>
+                <div class="grid grid-cols-1 gap-2 tours">
+                    <div class="tour flex">
+                        <div class="tour-image"><img src="assets/0maldives.jpg" alt=""></div>
+                        <div class="tour-info pl-4 pt-4 flex flex-col">
+                            <div class="tour-title">Sun Siyam Vilu Reef</div>
+                            <div class="tour-bottom text-center">
+                                <div class="tour-price"><span>1000</span>$</div>
+                                <div class="tour-count">
+                                    <div class="custom-number-input h-10 w-32">
+                                        <div class="flex flex-row h-10 w-full rounded-lg relative bg-transparent mt-1">
+                                          <button data-action="decrement" class=" bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                            <span class="m-auto text-2xl font-thin">−</span>
+                                          </button>
+                                          <input type="number" class="outline-none focus:outline-none text-center w-full bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="1"></input>
+                                        <button data-action="increment" class="bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                          <span class="m-auto text-2xl font-thin">+</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="property pl-16 pt-16">
+                            <ul class="ul">
+                                <li>Pool</li>
+                                <li>Beach</li>
+                                <li>Free Wifi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="h2">Итого: <span class="price">1000</span>$</h2>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        function decrement(e) {
+          const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement"]'
+          );
+          const target = btn.nextElementSibling;
+          let value = Number(target.value);
+          value--;
+          target.value = value;
+        }
+      
+        function increment(e) {
+          const btn = e.target.parentNode.parentElement.querySelector(
+            'button[data-action="decrement"]'
+          );
+          const target = btn.nextElementSibling;
+          let value = Number(target.value);
+          value++;
+          target.value = value;
+        }
+      
+        const decrementButtons = document.querySelectorAll(
+          `button[data-action="decrement"]`
+        );
+      
+        const incrementButtons = document.querySelectorAll(
+          `button[data-action="increment"]`
+        );
+      
+        decrementButtons.forEach(btn => {
+          btn.addEventListener("click", decrement);
+        });
+      
+        incrementButtons.forEach(btn => {
+          btn.addEventListener("click", increment);
+        });
+    </script>
+</body>
+</html>
